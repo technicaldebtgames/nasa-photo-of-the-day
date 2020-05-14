@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import {API_URL, API_KEY} from "../constants.js"
+import {API_URL, API_KEY, API_DATE_TAG} from "../constants.js"
 import "./Content.css";
 
 // header will have
@@ -12,7 +12,7 @@ import "./Content.css";
         // h3 resp.data.copyright
     // p resp.data.explanation
 
-export default function Content() {
+export default function Content(props) {
 
     const [contentImageURL, setContentImageURL] = useState(null);
     const [contentTitle, setContentTitle] = useState("Loading...");
@@ -24,7 +24,13 @@ export default function Content() {
 
     useEffect(() => {
 
-        axios.get(`${API_URL}${API_KEY}`)
+        let apiString = `${API_URL}${API_KEY}`;
+
+        if (props.useCustomDate) {
+            apiString += `${API_DATE_TAG}${props.customDate}`;
+        }
+
+        axios.get(`${apiString}`)
         .then(result => {
             //console.log(result);
           setContentImageURL(result.data.url);
@@ -35,6 +41,11 @@ export default function Content() {
         })
         .catch (error => {
           console.log("Error fetching data from API.");
+          setContentImageURL(null);
+          setContentTitle("No Image Found!");
+          setContentDate(props.customDate);
+          setContentCopyright("N/A");
+          setContentExplanation("No result was found at api.nasa.gov for date " + props.customDate + ". Please enter another date.");
         })
         .finally ( () => {
           console.log("API call has finished.");

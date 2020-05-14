@@ -1,9 +1,9 @@
 .contentContainer {
 
-    width: 100%;
+    width: 90%;
     background-color: black;
     color: white;
-
+    border-radius: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,9 +14,9 @@
 .contentTitleContainer {
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: wrap;
 
 }
@@ -43,12 +43,14 @@
 .contentImage {
 
     max-width: 75%;
-    margin-top: 20px;
+    margin-top: 50px;
+    border-radius: 25px;
 
 }
 
 p {
 
     max-width: 75%;
+    margin-bottom: 50px;
 
 }

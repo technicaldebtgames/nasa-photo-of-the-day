@@ -3,16 +3,32 @@ import "./Footer.css";
 
 // header will have
 // div (outer container)
-    // future functionality will use forward and back
-    // buttons to move between dates
+    // p Use custom date:
+    // checkbox selected means setUseCustomDate=true
+    // p "YYYY-MM-DD format:"
+    // textfield to hold date value
+    
+export default function Footer(props) {
 
-export default function Footer() {
+    //const footerText = "footerText";
 
-    const footerText = "footerText";
+    let dateString = "";
+
+    function changeDateString(event) {
+        dateString = event.target.value;
+    }
+
+    function onGeneratePage(event) {
+        //props.setUseCustomDate(event.target.checked);
+        props.setCustomDate(dateString);
+        props.setUseCustomDate(true);
+    }
 
     return (
         <div className="footerContainer">
-            <p className="footerText">{footerText}</p>
+            <p className="footerText">Want a custom date? Enter it in YYYY-MM-DD format:</p>
+            <input type="text" id="txtCustomDate" onChange={changeDateString}></input>
+            <input type="submit" value="Get the photo!" id="subGeneratePage" onClick={onGeneratePage}></input>
         </div>
     )
 }

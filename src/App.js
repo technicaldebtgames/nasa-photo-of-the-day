@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import Header from "./header/Header";
 import Content from "./content/Content";
@@ -22,13 +22,15 @@ function App() {
   });*/
   // End API test, working
 
-  
+  const [useCustomDate, setUseCustomDate] = useState(false);
+
+  const [customDate, setCustomDate] = useState(null);
 
   return (
     <div className="appContainer">
       <Header/>
-      <Content/>
-      <Footer/>
+      <Content useCustomDate={useCustomDate} customDate={customDate}/>
+      <Footer setUseCustomDate={setUseCustomDate} setCustomDate={setCustomDate}/>
     </div>
   )
   /*(
