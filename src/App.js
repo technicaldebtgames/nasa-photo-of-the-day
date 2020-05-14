@@ -5,6 +5,8 @@ import Header from "./header/Header";
 import Content from "./content/Content";
 import Footer from "./footer/Footer";
 
+// still working on styled components
+
 function App() {
 
   const [useCustomDate, setUseCustomDate] = useState(false);
