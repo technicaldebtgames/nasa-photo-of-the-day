@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import "./Footer.css";
 
 // header will have
@@ -10,8 +11,6 @@ import "./Footer.css";
     
 export default function Footer(props) {
 
-    //const footerText = "footerText";
-
     let dateString = "";
 
     function changeDateString(event) {
@@ -19,7 +18,6 @@ export default function Footer(props) {
     }
 
     function onGeneratePage(event) {
-        //props.setUseCustomDate(event.target.checked);
         props.setCustomDate(dateString);
         props.setUseCustomDate(true);
     }

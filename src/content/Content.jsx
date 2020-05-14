@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import styled from "styled-components";
 import axios from "axios";
 import {API_URL, API_KEY, API_DATE_TAG} from "../constants.js"
 import "./Content.css";
