@@ -1,0 +1,54 @@
+.contentContainer {
+
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contentTitleContainer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+
+.contentTitle {
+
+    margin-right: 10px;
+
+}
+
+.contentDate {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.contentCopyright {
+
+    margin-left: 10px;
+
+}
+
+.contentImage {
+
+    max-width: 75%;
+    margin-top: 20px;
+
+}
+
+p {
+
+    max-width: 75%;
+
+}

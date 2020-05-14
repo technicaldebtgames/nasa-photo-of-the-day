@@ -1,0 +1,17 @@
+.footerContainer {
+
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerText {
+
+    text-align: center;
+    color: white;
+
+}
