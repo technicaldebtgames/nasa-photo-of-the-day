@@ -1,0 +1,56 @@
+.contentContainer {
+
+    width: 90%;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contentTitleContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.contentTitle {
+
+    margin-right: 10px;
+
+}
+
+.contentDate {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.contentCopyright {
+
+    margin-left: 10px;
+
+}
+
+.contentImage {
+
+    max-width: 75%;
+    margin-top: 50px;
+    border-radius: 25px;
+
+}
+
+p {
+
+    max-width: 75%;
+    margin-bottom: 50px;
+
+}
