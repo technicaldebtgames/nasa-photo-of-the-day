@@ -1,32 +1,54 @@
 import React from "react";
 import styled from "styled-components";
-import "./Footer.css";
 
-// header will have
-// div (outer container)
-    // p Use custom date:
-    // checkbox selected means setUseCustomDate=true
-    // p "YYYY-MM-DD format:"
-    // textfield to hold date value
+// create styles
+const FooterContainer = styled.div`
+    width: 100%;
+    padding-bottom: 100px;
+    margin-top: 50px;
+    background-color: #444444;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`;
+
+const FooterText = styled.p`
+    text-align: center;
+    color: white;
+`;
+
+const TxtCustomDate = styled.input`
+    margin: 10px 10px 10px 10px;
+`;
+
+const SubGeneratePage = styled.input`
+    margin: 10px 10px 10px 10px;
+`;
     
 export default function Footer(props) {
 
+    // set date string to hold text value while text input is being changed
     let dateString = "";
 
+    // function for text input onChange event
     function changeDateString(event) {
         dateString = event.target.value;
     }
 
+    // set state for access in content component
     function onGeneratePage(event) {
         props.setCustomDate(dateString);
         props.setUseCustomDate(true);
     }
 
+    // return component elements
     return (
-        <div className="footerContainer">
-            <p className="footerText">Want a custom date? Enter it in YYYY-MM-DD format:</p>
-            <input type="text" id="txtCustomDate" onChange={changeDateString}></input>
-            <input type="submit" value="Get the photo!" id="subGeneratePage" onClick={onGeneratePage}></input>
-        </div>
+        <FooterContainer className="footerContainer">
+            <FooterText className="footerText">Want a custom date? Enter it in YYYY-MM-DD format:</FooterText>
+            <TxtCustomDate type="text" id="txtCustomDate" onChange={changeDateString}></TxtCustomDate>
+            <SubGeneratePage type="submit" value="Get the photo!" id="subGeneratePage" onClick={onGeneratePage}></SubGeneratePage>
+        </FooterContainer>
     )
 }
