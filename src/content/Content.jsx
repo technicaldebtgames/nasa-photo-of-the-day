@@ -13,6 +13,7 @@ const ContentContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 10px 10px 10px #222222;
 `;
 
 const ContentImage = styled.img`
