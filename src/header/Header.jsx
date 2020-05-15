@@ -1,15 +1,28 @@
 import React from "react";
-import "./Header.css";
+import styled from "styled-components";
 
-// header will have
-// div (outer container)
-    // h1 (title)
+// create styles
+const HeaderContainer = styled.div`
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`;
+
+const HeaderTitle = styled.h1`
+    font-family: "Space Mono", sans-serif;
+    color: white;
+    text-align: center;
+`;
 
 export default function Header() {
 
+    // return component elements
     return (
-        <div className="headerContainer">
-            <h1 className="headerTitle">Astronomy Pic Of The Day (NASA)</h1>
-        </div>
+        <HeaderContainer className="headerContainer">
+            <HeaderTitle className="headerTitle">Astronomy Pic Of The Day (NASA)</HeaderTitle>
+        </HeaderContainer>
     )
 }
