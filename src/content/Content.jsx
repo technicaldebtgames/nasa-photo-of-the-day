@@ -22,15 +22,18 @@ const ContentImage = styled.img`
 `;
 
 const ContentP = styled.p`
+    font-family: "Space Mono", sans-serif;
     max-width: 75%;
     margin-bottom: 50px;
 `;
 
 const ContentCopyright = styled.h3`
+    font-family: "Space Mono", sans-serif;
     margin-left: 10px;
 `;
 
 const ContentDate = styled.h3`
+    font-family: "Space Mono", sans-serif;
     margin-left: 10px;
     margin-right: 10px;
 `;
@@ -44,6 +47,7 @@ const ContentTitleContainer = styled.div`
 `;
 
 const ContentTitle = styled.h2`
+    font-family: "Space Mono", sans-serif;
     margin-right: 10px;
 `;
 

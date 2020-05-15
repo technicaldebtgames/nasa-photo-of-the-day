@@ -15,6 +15,7 @@ const FooterContainer = styled.div`
 `;
 
 const FooterText = styled.p`
+    font-family: "Space Mono", sans-serif;
     text-align: center;
     color: white;
 `;
